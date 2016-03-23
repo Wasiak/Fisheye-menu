@@ -31,10 +31,16 @@ var makeItemBigger = function(x, y) {
     var ratio = (dist > limit) ? 1 : (dist / limit);
     ratio = verticallyCorrect ? ratio : 1;
     var newSize = itemWidth + ((1 - ratio) * sizeDiff);
+    // I know margin-top value but later I wil get it by code
+    // 10 is initial margin 
+    var newMarginTop = 10 - ((1 - ratio) * (sizeDiff / 2));
+
+    // I don't know why this jQuery doesn't work but later I'll fix it
     // item.css({
     //   'width': newSize + 'px'
     // });
     item.style.width = newSize + 'px';
+    item.style.marginTop = newMarginTop + 'px';
   });
 };
 
