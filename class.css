@@ -29,7 +29,6 @@ body {
   width: 50px;
   vertical-align: top;
   margin-top: 10px;
-  transition: 0.4s;
 }
 
 #main-menu li a {
@@ -41,9 +40,4 @@ body {
 #main-menu li a img {
   display: block;
   width: 100%;
-}
-
-#main-menu li:hover {
-  width: 70px;
-  margin-top: 0;
 }
