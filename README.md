@@ -20,20 +20,17 @@ Add class '.fisheye-menu' to ul with images in li's
 </ul>    
 ```
 
-run a function and enjoy your fisheye menu f.e.
+Run a function and enjoy your fisheye menu.
+Possibility to set your own icon grow ratio and limit of icon reaction.
 
 ```javascript
-window.onload = fisheyeMenu;
+fisheyeMenu({
+	growRatio: 1.8,
+    verticalLimit: 10,
+    horizontalLimit: 1.5
+});
 ```
-
-Possibility to set your own icon grow ratio and limit of icon reaction
-
-```javascript
-// vertical limits of function running
-var topLimit = item.offsetTop - 10;
-var bottomLimit = item.offsetTop + item.offsetHeight + 10;
-// ratio of new size to default 
-var growRatio = 1.8;
-// horizontal limit of grow reaction for single item
-var limit = item.offsetWidth * 1.5;
-```
+setable options: 
+- growRatio - ratio of new size to default
+- verticalLimit - vertical limit of icon reaction [px]
+- horizontalLimit - horizontal limit of reaction by single icon [icon.width ratio]
