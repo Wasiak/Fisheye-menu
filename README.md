@@ -28,10 +28,10 @@ Possibility to set your own icon grow ratio and limit of icon reaction
 
 ```
 // vertical limits of function running
-  var topLimit = item.offsetTop - 10;
-  var bottomLimit = item.offsetTop + item.offsetHeight + 10;
-  // ratio of new size to default 
-  var growRatio = 1.8;
-  // horizontal limit of grow reaction for single item
-  var limit = item.offsetWidth * 1.5;
-  ```
+var topLimit = item.offsetTop - 10;
+var bottomLimit = item.offsetTop + item.offsetHeight + 10;
+// ratio of new size to default 
+var growRatio = 1.8;
+// horizontal limit of grow reaction for single item
+var limit = item.offsetWidth * 1.5;
+```
