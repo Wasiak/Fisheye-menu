@@ -9,7 +9,7 @@ Pure JS, no jQuery.
 
 Add class '.fisheye-menu' to ul with images in li's
 
-```javascript
+```html
 <ul class='fisheye-menu'>
     <li>
       <a href=''>
