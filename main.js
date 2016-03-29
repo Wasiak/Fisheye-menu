@@ -1,23 +1,23 @@
-window.onload = function() {
+var fisheyeMenu = function() {
   // get all items from fisheye-menu
   var items = Array.prototype.slice.call(document.querySelectorAll('.fisheye-menu li'));
   var item = items[0];
   //get horizontal center point of each item
   var itemsMiddle = items.map(function(item){ return item.offsetLeft + (item.offsetWidth / 2); });
+  var itemWidth = item.offsetWidth;
   // vertical limits of function running
   var topLimit = item.offsetTop - 10;
   var bottomLimit = item.offsetTop + item.offsetHeight + 10;
-  var itemWidth = item.offsetWidth;
   // ratio of new size to default 
   var growRatio = 1.8;
+  // horizontal limit of grow reaction for single item
+  var limit = item.offsetWidth * 1.5;
   var sizeDiff = Math.round(itemWidth * (growRatio - 1));
 
   var makeItemBigger = function(x, y) {
     var verticallyCorrect = (y > topLimit && y < bottomLimit) ? true : false;
     items.forEach(function(item, index) { 
       var middlePoint = itemsMiddle[index];
-      // horizontal limit of grow reaction for single item
-      var limit = item.offsetWidth * 1.5;
       // horizontal distance from center point to cursor
       var dist = Math.abs(x - middlePoint);
       // if distance is bigger than limit in any direction 
@@ -40,3 +40,4 @@ window.onload = function() {
     makeItemBigger(pointerX, pointerY);
   });
 }();
+window.onload = fisheyeMenu;
