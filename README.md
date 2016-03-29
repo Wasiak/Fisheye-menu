@@ -36,7 +36,6 @@ setable options:
 - horizontalLimit - horizontal limit of reaction by single icon [icon.width ratio]
 
 ![screen2](https://raw.githubusercontent.com/Wasiak/Fisheye-menu/master/images/screen2.jpg)
-
 Efect with custom options:
-growRatio: 2.8,
-horizontalLimit: 2.5
+- growRatio: 2.8,
+- horizontalLimit: 2.5
