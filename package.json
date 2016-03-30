@@ -1,0 +1,19 @@
+{
+  "name": "fisheye-menu",
+  "version": "1.0.0",
+  "description": "Interface with icons geting bigger when cursor is closer to icon horizontal center point",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wasiak/Fisheye-menu.git"
+  },
+  "author": "wasiak <qbawasiak@wp.pl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wasiak/Fisheye-menu/issues"
+  },
+  "homepage": "https://github.com/Wasiak/Fisheye-menu#readme"
+}
