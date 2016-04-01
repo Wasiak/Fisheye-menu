@@ -27,7 +27,7 @@ body {
 
 .fisheye-menu.go-down li {
   width: 50px;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 
 .fisheye-menu li {

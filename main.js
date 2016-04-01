@@ -15,7 +15,6 @@ var fisheyeMenu = function(options) {
   // horizontal limit of grow reaction for single item
   var limit = item.offsetWidth * (options.horizontalLimit || 1.5);
 
-  // var vertLimit = item.offsetHeight;
   var sizeDiff = Math.round(itemWidth * (growRatio - 1));
 
   var removeGoDown = function(evt) {
@@ -30,25 +29,19 @@ var fisheyeMenu = function(options) {
   var makeItemBigger = function(x, y) {
     var verticallyCorrect = (y > topLimit && y < bottomLimit) ? true : false;
     
+    // if mouse out from vertically cirrect area make items small with transition
     if (!verticallyCorrect && !item.parentNode.classList.contains('go-down')) {
         item.parentNode.classList.add('go-down');
     }
 
     items.forEach(function(item, index) { 
       var middlePoint = itemsMiddle[index];
-      // var VertMiddle = itemsVertMiddle[index];
       // horizontal distance from center point to cursor
       var dist = Math.abs(x - middlePoint);
 
       // if distance is bigger than limit in any direction 
       // ratio is equal to 1 (item size not changed)
       var ratio = (dist > limit) ? 1 : (dist / limit);
-
-      // var aboveDist = Math.abs(y - VertMiddle);
-      // console.log( aboveDist);
-      // var vertRatio = aboveDist < staticItem.offsetHeight / 2 ? 0 : (aboveDist / vertLimit);
-      // vertRatio = vertRatio > 1 ? ratio : vertRatio;
-      // console.log('vertRatio', vertRatio);
 
       ratio = verticallyCorrect ? ratio : 1;
 
