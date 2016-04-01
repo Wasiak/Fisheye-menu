@@ -18,16 +18,20 @@ var fisheyeMenu = function(options) {
   // var vertLimit = item.offsetHeight;
   var sizeDiff = Math.round(itemWidth * (growRatio - 1));
 
+  var removeGoDown = function(evt) {
+    evt.target.parentNode.classList.remove('go-down');
+  };
+  var setListeners = function() {
+    items.forEach(function(itm, index) {
+      itm.addEventListener("transitionend", removeGoDown);
+    });
+  }();
+
   var makeItemBigger = function(x, y) {
     var verticallyCorrect = (y > topLimit && y < bottomLimit) ? true : false;
     
     if (!verticallyCorrect && !item.parentNode.classList.contains('go-down')) {
         item.parentNode.classList.add('go-down');
-    } else if (verticallyCorrect && item.parentNode.classList.contains('go-down')) {
-      item.parentNode.addEventListener("transitionend", function() {
-        console.log('transition end')
-        item.parentNode.classList.remove('go-down');
-      });
     }
 
     items.forEach(function(item, index) { 
