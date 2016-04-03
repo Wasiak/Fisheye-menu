@@ -26,6 +26,23 @@ var fisheyeMenu = function(options) {
     });
   }();
 
+  // var removeGoDown = function(evt) {
+  //   console.log('remove godown')
+  //   evt.target.parentNode.classList.remove('go-down');
+  // };
+
+  // var resizeInterval;
+  // var resizeTimeout = 100; 
+
+  // var setListeners = function() {
+  //   items.forEach(function(itm, index) {
+  //     itm.addEventListener("transitionend", function() {
+  //       clearTimeout(resizeInterval);
+  //       resizeInterval = setTimeout(removeGoDown, resizeTimeout);
+  //     });
+  //   });
+  // }();
+
   var makeItemBigger = function(x, y) {
     var verticallyCorrect = (y > topLimit && y < bottomLimit) ? true : false;
     
