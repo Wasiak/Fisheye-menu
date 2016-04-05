@@ -7,11 +7,11 @@ body {
 #main-container {
   display: block;
   width: 80%;
-  height: 200px;
+  height: 400px;
   background-color: #ccc;
   margin: auto;
   margin-top: 100px;
-  padding-top: 75px;
+  padding-top: 175px;
   box-sizing: border-box;
 }
 
@@ -23,6 +23,11 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+}
+
+.fisheye-menu.go-down li {
+  width: 50px;
+  transition: 0.1s;
 }
 
 .fisheye-menu li {
